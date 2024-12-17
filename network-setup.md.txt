@@ -1,0 +1,19 @@
+Mrežna Konfiguracija
+
+Prvi Switch (168.90.0.0/16)
+
+- **Default Gateway**: 168.90.0.1
+- **Dodeljene IP adrese**:
+  - PC0: 168.90.0.3
+  - Laptop0: 168.90.0.4
+  - Server0: 168.90.0.5
+  - PC1: 168.90.0.6 (ili dodeljena automatski)
+
+DHCP Konfiguracija na Routeru (za Switch 1):
+- **Mreža**: 168.90.0.0/16
+- **Default Gateway**: 168.90.0.1
+- **DHCP Pool**:
+  ```bash
+  ip dhcp pool FIRST_POOL
+  network 168.90.0.0 255.255.0.0
+  default-router 168.90.0.1
